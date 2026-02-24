@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danish Siddiqui — Portfolio</title>
+
+<meta name="description" content="Personal portfolio — projects, services, and contact." />
+
+<!-- Typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+<!-- Three.js for 3D scenes -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js" defer></script>
+
+</head>
+<body>
+
+<a class="skip-link" href="#home">Skip to content</a>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor"></div>
+<div class="cursor-ring"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo"><span class="logo-letter">D</span>anish<span class="logo-dot"></span></a>
+  <ul class="nav-links" aria-label="Primary navigation">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book a Call</a>
+  <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile menu">
+  <div class="mobile-menu-inner">
+    <button class="mobile-close" type="button" data-menu-close aria-label="Close menu">Close</button>
+    <a data-menu-close href="#home">Home</a>
+    <a data-menu-close href="#about">About</a>
+    <a data-menu-close href="#services">Services</a>
+    <a data-menu-close href="#work">Work</a>
+    <a data-menu-close href="#contact">Contact</a>
+    <div class="mobile-menu-footer">
+      <span class="muted">Replace placeholders with your links.</span>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-bg hero-layer" data-depth="-40"></div>
+  <div class="hero-grid hero-layer" data-depth="-80"></div>
+  <div class="hero-orb hero-layer" data-depth="-140"></div>
+
+  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+
+  <div class="hero-content hero-layer" data-depth="60">
+    <div class="hero-badge"><span class="dot"></span> Portfolio</div>
+
+    <h1 class="hero-title">Design<br>with a<br><em class="hero-em">Human</em> Touch</h1>
+
+    <p class="hero-desc">
+      I create digital experiences powered by clean design, deep UX thinking, and premium-level animation using GSAP & Webflow.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#work" class="btn-primary">View Work</a>
+      <a href="#contact" class="btn-secondary">Contact Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+  <span class="section-label">About Me</span>
+  <h2 class="section-title">Crafting Memorable Digital Experiences</h2>
+
+  <div class="about-grid">
+    <div class="about-media">
+      <img class="about-photo" src="assets/images/profile-placeholder.svg" alt="Profile photo placeholder" loading="lazy" />
+    </div>
+    <div class="about-copy">
+      <p class="about-text">
+        I am Danish, a designer from Lucknow. I combine Webflow, GSAP, and UI/UX strategy to create websites that look premium and feel alive.
+      </p>
+      <p class="about-text muted">
+        (Replace this text with your bio. Keep it short, outcome-focused, and client-friendly.)
+      </p>
+    </div>
+  </div>
+
+  <div class="about-stats">
+    <div class="stat-card tilt-card">
+      <span class="tilt-glow"></span>
+      <div class="stat-number">5+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-card tilt-card">
+      <span class="tilt-glow"></span>
+      <div class="stat-number">30+</div>
+      <div class="stat-label">Projects Done</div>
+    </div>
+    <div class="stat-card tilt-card">
+      <span class="tilt-glow"></span>
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Client Satisfaction</div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section reveal">
+  <span class="section-label">My Toolkit</span>
+  <h2 class="section-title">Skills &amp; Technologies</h2>
+
+  <div class="skills-grid">
+    <div class="skill-pill tilt-card"><span class="tilt-glow"></span>Figma</div>
+    <div class="skill-pill tilt-card"><span class="tilt-glow"></span>Webflow</div>
+    <div class="skill-pill tilt-card"><span class="tilt-glow"></span>GSAP</div>
+    <div class="skill-pill tilt-card"><span class="tilt-glow"></span>Webflow CMS</div>
+    <div class="skill-pill tilt-card"><span class="tilt-glow"></span>HTML / CSS / JS</div>
+    <div class="skill-pill tilt-card"><span class="tilt-glow"></span>3D / Motion</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section reveal">
+  <span class="section-label">Services</span>
+  <h2 class="section-title">What I Do</h2>
+
+  <div class="services-grid">
+    <div class="service-card tilt-card">
+      <span class="tilt-glow"></span>
+      <h3>Web Design</h3>
+      <p>Modern UI/UX design using Figma with premium visual systems.</p>
+    </div>
+    <div class="service-card tilt-card">
+      <span class="tilt-glow"></span>
+      <h3>Webflow Dev</h3>
+      <p>Responsive builds, CMS, animations & scalable structures.</p>
+    </div>
+    <div class="service-card tilt-card">
+      <span class="tilt-glow"></span>
+      <h3>GSAP Animations</h3>
+      <p>Exclusive motion design using ScrollTrigger & timelines.</p>
+    </div>
+    <div class="service-card tilt-card">
+      <span class="tilt-glow"></span>
+      <h3>Brand Design</h3>
+      <p>Identity, typography, layouts & digital brand systems.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY WORK WITH ME -->
+<section id="why" class="section reveal">
+  <span class="section-label">Why work with me</span>
+
+  <div class="why-grid">
+    <div class="why-copy">
+      <h2 class="section-title">A rare combination of skills</h2>
+      <p class="about-text">
+        Most designers can’t build. Most developers can’t design. I do both — and animate everything in between.
+      </p>
+      <p class="about-text muted">
+        (Replace this copy with your own story and positioning. Use it to explain what makes you different.)
+      </p>
+    </div>
+    <ul class="why-points">
+      <li>
+        <h3>Jack of all trades</h3>
+        <p>End-to-end partner from strategy and UX to motion and build. No bouncing between multiple agencies.</p>
+      </li>
+      <li>
+        <h3>GSAP &amp; Webflow specialist</h3>
+        <p>Advanced scroll animations, interactions and CMS-driven builds that stay maintainable long-term.</p>
+      </li>
+      <li>
+        <h3>Obsessed with outcomes</h3>
+        <p>Design decisions grounded in conversion, clarity and brand impact — not just Dribbble shots.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="section reveal">
+  <span class="section-label">Portfolio</span>
+  <h2 class="section-title">Selected Projects</h2>
+
+  <canvas id="workCanvas" class="work-canvas"></canvas>
+
+  <div class="work-grid">
+
+    <div class="work-card tilt-card">
+      <span class="tilt-glow"></span>
+      <div class="work-img">
+        <img src="assets/images/project-placeholder-1.svg" alt="Project image placeholder" loading="lazy" />
+      </div>
+      <h3 class="work-title">Shukur</h3>
+      <p class="work-sub">GSAP advanced animations</p>
+    </div>
+
+    <div class="work-card tilt-card">
+      <span class="tilt-glow"></span>
+      <div class="work-img">
+        <img src="assets/images/project-placeholder-2.svg" alt="Project image placeholder" loading="lazy" />
+      </div>
+      <h3 class="work-title">Dotfun</h3>
+      <p class="work-sub">Full CMS + Interaction</p>
+    </div>
+
+    <div class="work-card tilt-card">
+      <span class="tilt-glow"></span>
+      <div class="work-img">
+        <img src="assets/images/project-placeholder-3.svg" alt="Project image placeholder" loading="lazy" />
+      </div>
+      <h3 class="work-title">Senses International</h3>
+      <p class="work-sub">3D + CMS</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section reveal">
+  <span class="section-label">Testimonials</span>
+  <h2 class="section-title">What clients say</h2>
+
+  <p class="testimonial-note">
+    Replace these placeholder testimonials with real client quotes before going live. The most honest reviews beat polished
+    sales copy every time.
+  </p>
+
+  <div class="testimonial-grid">
+    <article class="testimonial-card tilt-card">
+      <span class="tilt-glow"></span>
+      <p class="testimonial-text">
+        "Danish delivered a website that completely re-framed how our brand feels online. The animations feel premium and the CMS
+        setup means our team can update content without touching code."
+      </p>
+      <div class="testimonial-meta">
+        <span class="testimonial-initials">NC</span>
+        <div>
+          <strong>Client Name</strong>
+          <span>Role, Company</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="testimonial-card tilt-card">
+      <span class="tilt-glow"></span>
+      <p class="testimonial-text">
+        "The GSAP animations Danish built for our product site generated more compliments than any feature we launched this year.
+        Visitors actually remember the website as a whole."
+      </p>
+      <div class="testimonial-meta">
+        <span class="testimonial-initials">WF</span>
+        <div>
+          <strong>Client Name</strong>
+          <span>Role, Company</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="testimonial-card tilt-card">
+      <span class="tilt-glow"></span>
+      <p class="testimonial-text">
+        "Efficient, communicative and creative. We shipped a motion-heavy launch site in record time without ever feeling rushed.
+        I’d recommend working with Danish to anyone who cares about details."
+      </p>
+      <div class="testimonial-meta">
+        <span class="testimonial-initials">VP</span>
+        <div>
+          <strong>Client Name</strong>
+          <span>Role, Company</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section reveal">
+  <span class="section-label">Contact</span>
+  <h2 class="section-title">Let's Work Together</h2>
+
+  <p class="contact-text">
+    Have a project in mind? Want something animated, bold, and modern?  
+    I’m available for freelance and full-time roles.
+  </p>
+
+  <div class="contact-grid">
+    <form class="contact-form" id="contactForm" autocomplete="on" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+      </div>
+      <div class="contact-actions">
+        <button class="btn-primary" type="submit">Send Message</button>
+        <a href="mailto:hello@danishsiddiqui.com" class="btn-secondary">Or send an email</a>
+      </div>
+      <p class="form-status muted" id="formStatus" role="status" aria-live="polite"></p>
+      <p class="muted tiny">
+        Backend is optional. If it’s not running, this form will politely fall back (no errors).
+      </p>
+    </form>
+    <div class="contact-card">
+      <h3>Quick info</h3>
+      <p class="muted">Location: <strong>INSERT CITY</strong></p>
+      <p class="muted">Availability: <strong>INSERT AVAILABILITY</strong></p>
+      <p class="muted">Email: <strong>hello@danishsiddiqui.com</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Danish Siddiqui. Crafted with passion.</p>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" role="img" aria-label="Subtle light texture">
+  <defs>
+    <radialGradient id="g" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="transparent"/>
+  <circle cx="120" cy="120" r="160" fill="url(#g)"/>
+  <circle cx="420" cy="60" r="130" fill="url(#g)"/>
+  <circle cx="520" cy="380" r="180" fill="url(#g)"/>
+  <circle cx="80" cy="420" r="130" fill="url(#g)"/>
+</svg>
+

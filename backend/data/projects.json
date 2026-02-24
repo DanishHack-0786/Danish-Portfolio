@@ -1,0 +1,27 @@
+[
+  {
+    "id": "shukur",
+    "title": "Shukur",
+    "role": "GSAP advanced animations",
+    "summary": "Placeholder project. Replace with your own live project details and links.",
+    "tags": ["GSAP", "ScrollTrigger", "Animation"],
+    "url": "https://example.com/shukur"
+  },
+  {
+    "id": "dotfun",
+    "title": "Dotfun",
+    "role": "Full CMS + Interaction",
+    "summary": "Placeholder project. Replace with your own case study or product.",
+    "tags": ["Webflow", "CMS", "Interactions"],
+    "url": "https://example.com/dotfun"
+  },
+  {
+    "id": "senses-international",
+    "title": "Senses International",
+    "role": "3D + CMS",
+    "summary": "Placeholder project. Replace with your own visually rich build.",
+    "tags": ["3D", "WebGL", "CMS"],
+    "url": "https://example.com/senses"
+  }
+]
+

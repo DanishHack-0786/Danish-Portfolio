@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "Optional backend for the personal portfolio (contact, projects, resume).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
+
