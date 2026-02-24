@@ -544,18 +544,19 @@
   // Contact form (optional backend)
   // --------------------------
   function initContactForm() {
-    const form = $("#contactForm");
-    const status = $("#formStatus");
+    const form = document.querySelector("#contactForm");
+    const status = document.querySelector("#formStatus");
+  
     if (!form || !status) return;
-
+  
     const endpoints = [
       "https://danish-portfolio-1151.onrender.com/contact"
     ];
-
-    const setStatus = (msg) => 
+  
+    const setStatus = (msg) => {
       status.textContent = msg;
     };
-
+  
     const tryPost = async (payload) => {
       for (const url of endpoints) {
         try {
@@ -565,53 +566,53 @@
             body: JSON.stringify(payload),
           });
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
-          return true;
-        } catch {
-          // try next endpoint
+          return true; // success
+        } catch (err) {
+          // Try next endpoint
+          console.warn("Failed to send to:", url, err);
         }
       }
-      return false;
+      return false; // all endpoints failed
     };
-
+  
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-
+  
       const fd = new FormData(form);
       const payload = {
         name: String(fd.get("name") || "").trim(),
         email: String(fd.get("email") || "").trim(),
         message: String(fd.get("message") || "").trim(),
       };
-
+  
       if (!payload.name || !payload.email || !payload.message) {
         setStatus("Please fill in all fields.");
         return;
       }
-
+  
       setStatus("Sending…");
+  
       const ok = await tryPost(payload);
-
+  
       if (ok) {
         form.reset();
         setStatus("Message sent. I’ll get back to you soon.");
-        return;
+      } else {
+        setStatus("Backend isn’t running. Please use the email button instead.");
       }
-
-      setStatus("Backend isn’t running. Please use the email button instead.");
     });
   }
-
+  
   // --------------------------
-  // Init
+  // Init (make sure these exist)
   // --------------------------
-  initCustomCursor();
-  initNavbarScroll();
-  initMobileMenu();
-  initSmoothScrolling();
-  initScrollReveal();
-  initHeroAnimation();
-  initContactForm();
-  initTiltCards();
-  initThree();
+  initCustomCursor?.();
+  initNavbarScroll?.();
+  initMobileMenu?.();
+  initSmoothScrolling?.();
+  initScrollReveal?.();
+  initHeroAnimation?.();
+  initContactForm?.();
+  initTiltCards?.();
+  initThree?.();
 })();
-
