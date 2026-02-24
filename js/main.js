@@ -549,11 +549,10 @@
     if (!form || !status) return;
 
     const endpoints = [
-      "/contact", // if the frontend is served by the backend
-      "http://localhost:3001/contact", // default dev backend URL
+      "https://danish-portfolio-1151.onrender.com/contact"
     ];
 
-    const setStatus = (msg) => {
+    const setStatus = (msg) => 
       status.textContent = msg;
     };
 
